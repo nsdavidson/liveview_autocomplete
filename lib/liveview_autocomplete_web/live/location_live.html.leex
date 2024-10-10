@@ -1,0 +1,23 @@
+<form phx-change="search">
+  <fieldset>
+    <input type="text" name="searchTerm" value=""
+    placeholder="Search" />
+    <br />
+  </fieldset>
+</form>
+
+<br />
+<table>
+<tr>
+    <th>Ship</th>
+    <th>System Name</th>
+    <th>Pilot</th>
+</tr>
+<%= for location <- @locations  do %>
+<tr>
+    <td><%= location.ship %></td>
+    <td><%= location.system_name %></td>
+    <td><%= location.pilot %></td>
+</tr>
+<% end %>
+</table>
